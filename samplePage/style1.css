@@ -160,7 +160,7 @@ ul,ol{
 }
 
 /*适配1920*1080屏幕*/
-@media (min-width: 1000px){
+@media (min-width: 800px){
     .products > ol{
         display: flex;
         flex-direction: row;
