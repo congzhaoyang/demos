@@ -159,3 +159,35 @@ ul,ol{
     }
 }
 
+/*适配1920*1080屏幕*/
+@media (min-width: 1000px){
+    .products > ol{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10%;
+    }
+    .products > ol > li{
+        margin-top: 40px;
+    }
+    .products > ol > li .img{}
+    .products > ol > li .img > img{
+        min-width: 288px;
+        height: 180px;
+        background: #D8D8D8;
+        border-radius: 4px;
+
+    }
+    .products > ol > li > h3{
+        position: relative;
+        max-width: 288px;
+        font-family: Consolas;
+    }
+    .products > ol > li > p{
+        position: relative;
+        max-width: 288px;
+    }
+}
+
+
