@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* logo 模块*/
+.logo{
+    text-align: center;
+
+}
+.logo > .image{
+    width: 72px;
+    height: 72px;
+    display: inline-block;
+    margin-top: 60px;
+    border-radius: 50%;
+}
+.logo > .slogan{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 34px;
+}
+.logo > .slogan > li{
+    min-width: 128px;
+    background-color: #D8D8D8;
+    margin-bottom: 24px;
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+/* banner 模块*/
+.banner{
+    background: #EFEFEF;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 46px;
+    padding-bottom: 40px;
+}
+.banner .banner01{
+    background: #D8D8D8;
+    border-radius: 14px;
+    max-width: 200px;
+    line-height: 40px;
+    padding: 0 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Consolas;
+}
+.banner .banner02{
+    background: #D8D8D8;
+    border-radius: 14px;
+    min-width: 376px;
+    line-height: 40px;
+    padding: 0 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Consolas;
+}
+@media (min-width: 414px) {
+    .banner .banner01{
+        display: none;
+    }
+}
+@media (max-width: 413px) {
+    .banner .banner02{
+        display: none;
+    }
+}
+
+.banner .details{
+    margin-top: 26px;
+}
+.banner .details p{
+    background: #E8E7E7;
+    min-width: 250px;
+    height: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-family: Consolas;
+}
+@media (max-width: 414px) {
+    .banner .details p{
+        font-size: 8px;
+    }
+}
+
+
+/* products 模块*/
+.products{
+    margin: 0 auto;
+}
+@media (max-width: 414px){
+    .products > ol{
+
+    }
+    .products > ol > li{
+        margin-top: 40px;
+    }
+    .products > ol > li .img{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .products > ol > li .img > img{
+        min-width: 288px;
+        height: 180px;
+        background: #D8D8D8;
+        border-radius: 4px;
+
+    }
+    .products > ol > li > h3{
+        position: relative;
+        max-width: 288px;
+        left: 43px;
+        font-family: Consolas;
+    }
+    .products > ol > li > p{
+        position: relative;
+        max-width: 288px;
+        left: 43px;
+    }
+}
+
+@media (min-width: 415px){
+    .products > ol{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 40px;
+    }
+    .products > ol > li{
+        margin-top: 40px;
+    }
+    .products > ol > li .img{}
+    .products > ol > li .img > img{
+        min-width: 288px;
+        height: 180px;
+        background: #D8D8D8;
+        border-radius: 4px;
+
+    }
+    .products > ol > li > h3{
+        position: relative;
+        max-width: 288px;
+        font-family: Consolas;
+    }
+    .products > ol > li > p{
+        position: relative;
+        max-width: 288px;
+    }
+}
+
