@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>are you ok</title>
+    <style>
+        body{
+            font-family:'Consolas','Times New Roman','Microsoft YaHei',SimHei;
+            font-size: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        .outer {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .inner {
+            position: relative;
+            max-width: 768px;
+            padding: 20px 10px;
+            margin: 0 auto;
+        }
+
+        #forkme_banner {
+            display: block;
+            position: absolute;
+            top:0;
+            right: 10px;
+            z-index: 10;
+            padding: 10px 50px 10px 10px;
+            color: #fff;
+            background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(0,0,0,.5);
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        #header_wrap {
+            background: #212121;
+            background: -moz-linear-gradient(top, #373737, #212121);
+            background: -webkit-linear-gradient(top, #373737, #212121);
+            background: -ms-linear-gradient(top, #373737, #212121);
+            background: -o-linear-gradient(top, #373737, #212121);
+            background: linear-gradient(top, #373737, #212121);
+        }
+
+        #header_wrap .inner {
+            padding: 50px 10px 30px 10px;
+        }
+
+        #project_title {
+            margin: 0;
+            color: #fff;
+            font-size: 42px;
+            font-weight: 700;
+            text-shadow: #111 0px 0px 10px;
+        }
+
+        #project_tagline {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            background: none;
+            text-shadow: #111 0px 0px 10px;
+        }
+        .left .music > iframe {
+            frameborder: no;
+            border: 0;
+            marginwidth: 0;
+            marginheight: 0;
+            width: 330px;
+            height: 86px;
+            /*border: 1px solid red;*/
+        }
+        .left{
+            /*border: 1px solid red;*/
+            display: block;
+            float: left;
+            width: 330px;
+            text-align: center;
+        }
+        .left .input-box{
+            margin-left: 10px;
+        }
+        .left .input-box > p > input {
+            font-family: Consolas;
+            font-size: 10px;
+            width: 90px;
+        }
+        .left #button1 {
+            -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+            background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+            background-color:#f9f9f9;
+            -webkit-border-top-left-radius:6px;
+            -moz-border-radius-topleft:6px;
+            border-top-left-radius:6px;
+            -webkit-border-top-right-radius:6px;
+            -moz-border-radius-topright:6px;
+            border-top-right-radius:6px;
+            -webkit-border-bottom-right-radius:6px;
+            -moz-border-radius-bottomright:6px;
+            border-bottom-right-radius:6px;
+            -webkit-border-bottom-left-radius:6px;
+            -moz-border-radius-bottomleft:6px;
+            border-bottom-left-radius:6px;
+            text-indent:0;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            color:#666666;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            font-style:normal;
+            height:30px;
+            line-height:30px;
+            width:60px;
+            text-decoration:none;
+            text-align:center;
+            text-shadow:1px 1px 0px #ffffff;
+        }
+        .left #button1:hover {
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+            background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+            background-color:#e9e9e9;
+            cursor: pointer;
+        }
+        .left #button1:active {
+             position:relative;
+             top:1px;
+         }
+        .right{
+            line-height: 20px;
+            /*border: 1px solid red;*/
+            display: inline;
+            float: right;
+            width: 330px;
+            overflow: scroll;
+            height: 420px;
+            text-align: center;
+            background: #efefef;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var btn = document.getElementById("button1");
+            btn.onclick = function () {
+                var oInput0 = document.getElementsByClassName('left')[0].getElementsByClassName('input-box')[0].getElementsByTagName('p')[0].getElementsByTagName('input')[0];
+                var oInput1 = document.getElementsByClassName('left')[0].getElementsByClassName('input-box')[0].getElementsByTagName('p')[1].getElementsByTagName('input')[0];
+                var oInput2 = document.getElementsByClassName('left')[0].getElementsByClassName('input-box')[0].getElementsByTagName('p')[2].getElementsByTagName('input')[0];
+                var oInput3 = document.getElementsByClassName('left')[0].getElementsByClassName('input-box')[0].getElementsByTagName('p')[3].getElementsByTagName('input')[0];
+                var oInput4 = document.getElementsByClassName('left')[0].getElementsByClassName('input-box')[0].getElementsByTagName('p')[4].getElementsByTagName('input')[0];
+                var oInput5 = document.getElementsByClassName('left')[0].getElementsByClassName('input-box')[0].getElementsByTagName('p')[5].getElementsByTagName('input')[0];
+                //alert([oInput0.value,oInput1.value,oInput2.value,oInput3.value,oInput4.value,oInput5.value]);
+                document.getElementsByClassName('right')[0].getElementsByClassName('output0')[0].innerHTML = oInput0.value;
+                document.getElementsByClassName('right')[0].getElementsByClassName('output1')[0].innerHTML = oInput1.value;
+                document.getElementsByClassName('right')[0].getElementsByClassName('output2')[0].innerHTML = oInput2.value;
+                document.getElementsByClassName('right')[0].getElementsByClassName('output3')[0].innerHTML = oInput3.value;
+                document.getElementsByClassName('right')[0].getElementsByClassName('output4')[0].innerHTML = oInput4.value;
+                document.getElementsByClassName('right')[0].getElementsByClassName('output5')[0].innerHTML = oInput5.value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+            <a id="forkme_banner" href="#">View on GitHub</a>
+            <h1 id="project_title">are you ok 生成器</h1>
+            <h2 id="project_tagline">人因梦想而伟大</h2>
+        </header>
+    </div>
+    <div class="left">
+        <div class="music">
+            <iframe
+                    src="//music.163.com/outchain/player?type=2&id=31814005&auto=1&height=66">
+            </iframe>
+        </div>
+        <div class="input-box">
+            <p>How are you <input value="Indian MI fans"></p>
+            <p>Do you like <input value="MI 4I"></p>
+            <p>Do you like <input value="MI band"> ？(｡･ω･｡)</p>
+            <p>We will give everyone(･∀･) <input value="A free MI band"></p>
+            <p>I'm rever(very) happy to ,to be a(n) <input value="Indian"></p>
+            <p>I'm rever(very) happy to ,to be <input value="a gift"></p>
+        </div>
+        <button id="button1">生成</button>
+    </div>
+    <div class="right">
+        3Q!
+        <br>
+        丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        【Hello(°∀°)ﾉ
+        <br>
+        3Q—v—
+        <br>
+        3Q为麻吃^◇^】
+        <br>
+        →_→
+        <br>
+        ※REPEAT X4
+        <br>
+        How are you <span class="output0">Indian MI fans</span>?=◇=
+        <br>
+        你们好吗印度米饭们
+        <br>
+        Do you like <span class="output1">MI 4I</span>（for I）?
+        <br>
+        你们喜欢小米4i吗（因为我）
+        <br>
+        OK <span class="output0">Indian MI fans</span>
+        <br>
+        好的 阿三米饭
+        <br>
+        Do you like <span class="output2">MI band</span>？(｡･ω･｡)
+        <br>
+        你喜欢小米手带吗？
+        <br>
+        We will give everyone(･∀･)
+        <br>
+        我们要给每个人
+        <br>
+        <span class="output3">A free MI band</span>
+        <br>
+        一个免费的小米手带
+        <br>
+        And ME!(｡･ω･｡)
+        <br>
+        还有人家~
+        <br>
+        MI FANS！Do you ↗like↗ ?
+        <br>
+        米饭们！你们喜欢（我）吗？
+        <br>
+        I'm rever(very) happy to
+        <br>
+        我很高兴
+        <br>
+        to be a（n） <span class="output4">Indian</span>
+        <br>
+        去天天洗body soap吃咖喱（误=w=）
+        <br>
+        I'm rever(very) happy to
+        <br>
+        我十分高兴
+        <br>
+        to be a <span class="output5">gift</span>(￣3￣)
+        <br>
+        去做一个礼物
+        <br>
+        I'm a free <span class="output5">gift</span>（/TДT)/
+        <br>
+        我是免费的哟
+        <br>
+        For every every one
+        <br>
+        送给每个每个人
+        <br>
+        Do you like me(｡･ω･｡)？！
+        <br>
+        你们宣我吗？！
+        <br>
+        【<span class="output0">Indian MI fans</span>：Yeahε=ε=(ノ≧∇≦)ノ】
+        <br>
+        3Q为麻吃^◇^
+        <br>
+        <br>
+        Oh <span class="output0">Indian MI fans</span>
+        <br>
+        (⊙o⊙)印度米饭
+        <br>
+        <br>
+        ※【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】 X2
+        <br>
+        【<span class="output0">Indian MI fans</span>：Yeahε=ε=(ノ≧∇≦)ノ】
+        <br>
+        Oh everyone
+        <br>
+        噢每个人
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        IX7 Mean
+        <br>
+        我我我我我我我 是说
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        I'm very OK！
+        <br>
+        我很好！
+        <br>
+        <br>
+        ※Oh <span class="output0">Indian MI fans</span>
+        <br>
+        (⊙o⊙)印度米饭
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        Oh China MI fans
+        <br>
+        (⊙o⊙)中国米饭
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        <br>
+        I X6 mean
+        <br>
+        我我我我我我 是说
+        <br>
+        How are you?丶(°∀°）
+        <br>
+        你们好吗
+        <br>
+        How are you?(°∀°)ﾉ
+        <br>
+        你们好吗
+        <br>
+        I'm fine 3Q
+        <br>
+        我很好 三克油
+        <br>
+        <br>
+        ※【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        We will give everyone a band
+        <br>
+        我们会给每个人一个手带
+        <br>
+        丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?
+        <br>
+        We will give a band to everyone
+        <br>
+        我们会给一个手带给每个人
+        <br>
+        丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?
+        <br>
+        We will give color(ful) strap
+        <br>
+        我们要送彩色的小带带
+        <br>
+        All for free!(=・ω・=)
+        <br>
+        都是免费的
+        <br>
+        I'm very happy
+        <br>
+        我很高兴
+        <br>
+        <br>
+        ※Oh <span class="output0">Indian MI fans</span>
+        <br>
+        (⊙o⊙)印度米饭
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        【<span class="output0">Indian MI fans</span>：Yeahε=ε=(ノ≧∇≦)ノ】
+        <br>
+        Oh everyone
+        <br>
+        (⊙o⊙)大家
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        I X6 mean
+        <br>
+        我我我我我我 是说
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        I'm very OK!
+        <br>
+        我很好哒
+        <br>
+        <br>
+        ※Once again(ノω<。)ノ))☆.。
+        <br>
+        再来一次
+        <br>
+        Oh <span class="output0">Indian MI fans</span>
+        <br>
+        (⊙o⊙)印度米饭
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        Oh China MI fans
+        <br>
+        (⊙o⊙)中国米饭
+        <br>
+        【丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?】X2
+        <br>
+        I X6 mean
+        <br>
+        我我我我我我 是说
+        <br>
+        【How are you】 X2
+        <br>
+        你们好吗
+        <br>
+        I'm fine 3Q
+        <br>
+        我很好 三克油
+        <br>
+        丶(°∀°)Are you OK?(°∀°)ﾉ
+        <br>
+        Are you all gay?
+    </div>
+</body>
+</html>
