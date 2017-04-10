@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03.函数接收参数并弹出</title>
+    <style>
+        body{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+        body > form > p{
+            font-family: Consolas;
+            font-size: 1em;
+        }
+        body > form > p > input{
+            font-family: Consolas;
+            font-size: 1em;
+            color: red;
+        }
+        body > p >button{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        //定义传参后显示的alert函数
+        var myFn = function (a, b) {
+            //对输入框无信息是进行填写提示
+            if((a.value === '')||(b.value === '')){
+                if(a.value === ''){
+                    alert("请输入city");
+                }else if(b.value === ''){
+                    alert("请输入block");
+                }
+            }else{
+                alert("欢迎来自"+a.value+b.value+"区的网友");
+            }
+        };
+        //加载完页面执行的函数
+        window.onload = function () {
+            var oInput = document.getElementsByTagName("input");
+            var oButton = document.getElementsByTagName("button")[0];
+            //点击button执行
+            oButton.onclick = function () {
+                myFn(oInput[0],oInput[1]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get">
+        <p>city:<input type="text"></p>
+        <p>block:<input type="text"></p>
+    </form>
+    <p><button>传参</button></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01.控制div属性</title>
+    <style>
+         .content .button{
+             text-align: center;
+        }
+
+         #model{
+             width: 100px;
+             height: 100px;
+             background: black;
+             margin: 50px auto;
+             display: block;
+        }
+    </style>
+    <script>
+        //定义改变style函数
+        var changestyle = function (element,attribute,value) {
+            element.style[attribute] = value;
+        };
+
+        //定义点击后执行的函数
+        window.onload = function () {
+            var oButton = document.getElementsByTagName('input');
+            var oDiv = document.getElementById('model');
+            var oAttribute = ["width","height","background","display","display"];
+            var oValue = ["200px","200px","red","none","block"];
+
+            for(var i = 0; i < oButton.length; i++){
+                oButton[i].index = i;
+                oButton[i].onclick = function () {
+                    this.index == oButton.length - 1 && (oDiv.style.cssText = "");
+                    changestyle(oDiv,oAttribute[this.index],oValue[this.index]);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <div class="button">
+        <input type="button" value="变宽">
+        <input type="button" value="变高">
+        <input type="button" value="变色">
+        <input type="button" value="隐藏">
+        <input type="button" value="重置">
+    </div>
+    <div id="model">
+
+    </div>
+</div>
+</body>
+</html>
+

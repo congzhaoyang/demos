@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04.用循环将3个div变成红色</title>
+    <style>
+        body > p {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+        body > p > button{
+            margin: 8px;
+        }
+        body > div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+        body > div > div {
+            width: 100px;
+            height: 100px;
+            background: black;
+            margin: 8px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById("outer").getElementsByTagName("div");
+            var oButton0 = document.getElementsByTagName("button")[0];
+            var oButton1 = document.getElementsByTagName("button")[1];
+            //changeColor功能
+            oButton0.onclick = function () {
+                for(var i = 0;i < oDiv.length;i++){
+                    oDiv[i].style.background = "red";
+                }
+            }
+            //reset功能
+            oButton1.onclick = function () {
+                for(var i = 0;i < oDiv.length;i++){
+                    oDiv[i].style.background = "black";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><button>点击变换</button><button>点击复原</button></p>
+    <div id="outer">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

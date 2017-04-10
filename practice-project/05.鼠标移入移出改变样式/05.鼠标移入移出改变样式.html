@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06.鼠标移入移出改变样式</title>
+    <style>
+        p{
+            margin: 0px;
+            border: 0px;
+        }
+        body :hover {
+            width: 150px;
+            height: 150px;
+            background: #f0f0f0;
+            padding: 10px;
+            border: 10px solid red;
+            margin: 0 auto;
+            cursor: crosshair;
+            color: black;
+        }
+        body > div {
+            width: 150px;
+            height: 150px;
+            background: #000;
+            padding: 10px;
+            border: 10px solid black;
+            margin: 0 auto;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>鼠标移入改变样式，鼠标移出恢复。</div>
+</body>
+</html>

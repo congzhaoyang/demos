@@ -1,0 +1,9 @@
+*{
+    background: lightgreen;
+}
+
+.outer #change_color_button #green{
+    border: 4px solid green;
+    margin-right: 10px;
+    background: white;
+}
