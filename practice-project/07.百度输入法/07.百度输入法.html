@@ -9,12 +9,17 @@
         body > div > div {
             font-size: 12px;
             border: 1px solid lightblue;
-            width: 40px;
+            width: 50px;
             text-align: center;
             line-height: 10px;
         }
-        body > div > div > p:hover {
-
+        body > div > button {
+            cursor: pointer;
+        }
+        body > div > div > div {
+            padding: 5px 10px 5px 10px;
+        }
+        body > div > div :hover {
             background: #f0ffff;
         }
     </style>
@@ -22,12 +27,19 @@
         window.onload = function () {
             var oBtn = document.getElementsByTagName('div')[0].getElementsByTagName('button')[0];
             var oDiv = document.getElementsByTagName('div')[0].getElementsByTagName('div')[0];
+            //var oCloseBtn = document.getElementsByTagName('div')[0].getElementsByTagName('div')[0].getElementsByTagName('div')[2];
+            var oCloseBtn = document.getElementById('close-button');
             oBtn.onclick = function() {
-                if(oBtn === true){
+                /*if(oBtn === false){
                     oDiv.style.visibility = "visible";
                 }else{
                     oDiv.style.visibility = "hidden";
-                }
+                }*/
+                //oDiv.style.visibility == "visible"? "hidden":"visible";
+                oDiv.style.display === "block" ? "none":"block";
+            };
+            oCloseBtn.onclick = function() {
+                oDiv.style.display = "none";
             }
         }
     </script>
@@ -36,9 +48,9 @@
     <div>
         <button>输入法</button>
         <div>
-            <p>手写</p>
-            <p>拼音</p>
-            <p>关闭</p>
+            <div>手写</div>
+            <div>拼音</div>
+            <div id="close-button">关闭</div>
         </div>
     </div>
 </body>
