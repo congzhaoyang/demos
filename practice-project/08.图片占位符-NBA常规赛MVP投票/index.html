@@ -51,7 +51,6 @@
                 let img = allImages[i];
                 let url = img.getAttribute('data-src');
                 let tempImage = document.createElement('img');
-                let index = 1;
                 tempImage.src = url;
                 tempImage.onload = function name(params) {
                     img.src = url;
