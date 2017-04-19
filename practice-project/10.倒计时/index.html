@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body > .wrapper {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input id="hour" value="0"></input>:<input id="minute" value="0"></input>:<input id="second" value="0"></input>
+        <button type="button" id="start">开始</button>
+        <button type="button" id="pause">暂停</button>
+        <button type="button" id="reset">重置</button>
+    </div>
+    <script>
+        window.onload = function(){
+            var oHour = document.getElementById("hour");
+            var oMinute = document.getElementById("minute");
+            var oSecond = document.getElementById("second");
+            var total = (oHour.value)*3600 + (oMinute.value)*60 + oSecond.value;
+            alert(total);
+            var startButton = document.getElementById("start");
+            var pauseButton = document.getElementById("pause");
+            var resetButton = document.getElementById("reset");
+
+            //秒表功能
+            startButton.addEventListener("click",function(){
+                var id = setInterval(function(){
+                    if(total <= 0){
+                        clearInterval(id);
+                    }
+                    total -= 1;
+                    let hour = parseInt(total / 3600,10);
+                    let minute = parseInt((total - hour * 3600) / 60,10);
+                    let second = parseInt(total - hour * 3600 - minute *60);
+                    oHour.value = hour;
+                    oMinute.value = minute;
+                    oSecond.value = second;
+                },1000);
+            })
+        }
+    </script>
+</body>
+</html
