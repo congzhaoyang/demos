@@ -105,6 +105,27 @@
             <button class="myButton" type="button">开始计算</button>
         </div>
     </div>
-    <script src="./insuranceCalculator.js"></script>
+    <script>
+        'use strict'
+
+        var button = document.getElementsByTagName('button')[0];
+        button.onclick = function () {
+            document.getElementsByTagName("textarea")[0].value = null;
+            var initiateAge = Number(document.getElementsByTagName('input')[0].value);
+            var terminateAge = Number(document.getElementsByTagName('input')[1].value);
+            var initiateValue = Number(document.getElementsByTagName('input')[2].value);
+
+            var tempValue = initiateValue;
+            var rate = Number(document.getElementsByTagName('input')[3].value);
+            var sum = initiateValue;
+            for(var i = initiateAge; i <= terminateAge; i++){
+                console.log(i+"岁，钱数："+tempValue.toFixed(2)+",总钱数："+sum.toFixed(2)+";");
+                document.getElementsByTagName("textarea")[0].value += (i+"岁，钱数："+tempValue.toFixed(2)+",总钱数："+sum.toFixed(2)+";\n");
+                tempValue *= rate;
+                sum += tempValue
+            }
+            console.log("计算完毕");
+        }
+    </script>
 </body>
 </html>
