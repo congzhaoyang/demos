@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <style>
+        body > .wrapper > .clock {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -256px 0 0 -256px;
+        }
+        body > .wrapper > .clock > .dial {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        body > .wrapper > .clock > .hourHand {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transform: rotate(60deg);
+        }
+        body > .wrapper > .clock > .minuteHand {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            transform: rotate(-60deg);
+        }
+        body > .wrapper >.clock > .secondHand {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            transform: rotate(165.1deg);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="clock">
+        <img src="./clock-icon0.png" alt="dial" class="dial">
+        <img src="./hourHand0.png" alt="hourHand" class="hourHand">
+        <img src="./minuteHand0.png" alt="minuteHand" class="minuteHand">
+        <img src="./secondHand0.png" alt="secondHand" class="secondHand">
+    </div>
+</div>
+<script>
+    var clock = document.getElementById('clock');
+    var hour = document.getElementById('hour');
+    var minute = document.getElementById('minute');
+    var second = document.getElementById('second');
+
+    function surface() {
+        var currentDate = new Date();
+        var hours = currentDate.getHours();
+        var minutes = currentDate.getMinutes();
+        var seconds = currentDate.getSeconds();
+
+        seconds = hours * 3600 + minutes * 60 + seconds;
+
+        var hoursDeg = seconds / 120 + 60;
+        var minutesDeg = seconds * 0.1 - 60;
+        var secondsDeg = seconds * 6 + 165.1;
+
+        document.querySelector('.hourHand').style.transform = 'rotate('+hoursDeg+'deg)';
+        document.querySelector('.minuteHand').style.transform = 'rotate('+minutesDeg+'deg)';
+        document.querySelector('.secondHand').style.transform = 'rotate('+secondsDeg+'deg)';
+
+    }
+    setInterval('surface()', 1000);
+
+</script>
+</body>
+</html>

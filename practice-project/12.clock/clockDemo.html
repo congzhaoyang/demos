@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clockDemo</title>
+    <style>
+        body {
+            background: black;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        body > .clock {
+            border: 4px solid white;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+        }
+        body > .clock > div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transition: all 1s;
+        }
+        body > .clock > .secondHand {
+            width: 1px;
+            height: 100px;
+            margin: -100px 0 0 1px;
+            transform: rotate(0deg);
+            transform-origin: 2px 100px;
+            background: rgba(0,255,0,0.99);
+            z-index: 2;
+        }
+        body > .clock > .minuteHand {
+            width: 3px;
+            height: 80px;
+            margin: -80px 0 0 -1px;
+            transform: rotate(0deg);
+            transform-origin: 2px 80px;
+            background: rgba(0,0,255,0.99);
+            z-index: 1;
+        }
+        body > .clock > .hourHand {
+            width: 5px;
+            height: 60px;
+            margin: -60px 0 0 -2px;
+            transform: rotate(0deg);
+            transform-origin: 4px 60px;
+            background: rgba(255,0,0,0.99);
+            z-index: 0;
+        }
+    </style>
+</head>
+0
+<body>
+<div class="clock">
+    <div class="secondHand"></div>
+    <div class="minuteHand"></div>
+    <div class="hourHand"></div>
+</div>
+<script>
+    'use strict';
+
+    function step () {
+        var now = new Date();
+
+        var seconds = now.getSeconds();
+        var minutes = now.getMinutes();
+        var hours = now.getHours();
+
+        if(hours > 12){
+            hours -= 12;
+        }
+
+        var secondDeg = (seconds/60 * 360);
+        var minuteDeg = (minutes*60 + seconds)/3600 * 360;
+        var hourDeg = (hours*60*60 + minutes*60 + seconds)/(12*3600) * 360;
+
+        //console.log(secondDeg,minuteDeg,hourDeg);
+
+        document.querySelector('.secondHand').style.transform =  `rotate(${secondDeg}deg)`;
+        document.querySelector('.minuteHand').style.transform =  `rotate(${minuteDeg}deg)`;
+        document.querySelector('.hourHand').style.transform =  `rotate(${hourDeg}deg)`;
+    }
+
+    step();
+    setInterval(function () {
+        step();
+    },1000);
+</script>
+</body>
+</html>
