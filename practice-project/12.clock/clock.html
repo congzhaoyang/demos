@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>clock</title>
     <style>
+        body {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
         body > .wrapper > .clock {
             position: absolute;
             top: 50%;
@@ -38,7 +43,7 @@
             transform: rotate(165.1deg);
         }
 
-        .cont {
+        body > .wrapper > .cont {
             position:absolute;
             height:100%;
             width:100%;
@@ -48,8 +53,7 @@
             background:      -o-linear-gradient(90deg, #C04848 10%, #480048 90%); /* Opera 11.10+ */
             background:         linear-gradient(90deg, #C04848 10%, #480048 90%); /* W3C */
         }
-
-        .stars {
+        body > .wrapper > .cont > .stars {
             position:absolute;
             top:0;
             left:0;
@@ -62,7 +66,7 @@
             z-index:0;
         }
 
-        .interface {
+        body > .wrapper > .cont > .interface {
             overflow:hidden;
             height:80%;
             width:80%;
@@ -71,12 +75,6 @@
             left:10%;
             opacity:0.9;
         }
-        .topBar {
-            background:#eef2f3;
-            width:100%;
-            padding:10px;
-        }
-
     </style>
 </head>
 <body>
@@ -89,8 +87,9 @@
     </div>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <div class='cont'>
-        <div class='stars'></div>
+        <div class='stars'>
 
+        </div>
         <div class='interface'>
 
         </div>
@@ -117,10 +116,8 @@
         document.querySelector('.hourHand').style.transform = 'rotate('+hoursDeg+'deg)';
         document.querySelector('.minuteHand').style.transform = 'rotate('+minutesDeg+'deg)';
         document.querySelector('.secondHand').style.transform = 'rotate('+secondsDeg+'deg)';
-
     }
     setInterval('surface()', 1000);
-
 </script>
 </body>
 </html>
