@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        body > .eyes {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+            transform: rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+        body > .eyes > div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+        body > .eyes > .part1 {
+            background: red;
+            width: 100px;
+            height: 100px;]
+            transform: translateZ(50px);
+        }
+        body > .eyes > .part2 {
+            background: black;
+            width: 50px;
+            height: 50px;
+            transform: translateZ(100px);
+        }
+        body > .eyes > .part3 {
+            background: white;
+            width: 25px;
+            height: 25px;
+            transform: translateZ(110px);
+        }
+    </style>
+</head>
+<body>
+    <div class="eyes">
+        <div class="part1"></div>
+        <div class="part2"></div>
+        <div class="part3"></div>
+    </div>
+    <div class="eyes">
+        <div class="part1"></div>
+        <div class="part2"></div>
+        <div class="part3"></div>
+    </div>
+    <script>
+        var x = 0;
+        var y = 0;
+
+        function step () {
+            $('.eyes').css({
+            transform: 'rotateX('+x+'deg) rotateY('+y+'deg)'
+            });
+            x = Math.random()*90 - 45;
+            y = Math.random()*90 - 45;
+
+            setTimeout(step,1000);
+        }
+        step();
+    </script>
+</body>
+</html>
