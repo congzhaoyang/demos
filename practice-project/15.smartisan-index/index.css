@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    font-family: PingFang SC,Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Microsoft Yahei,\\5FAE\8F6F\96C5\9ED1,STHeiti,\\534E\6587\7EC6\9ED1,sans-serif;
+}
+a {
+    text-decoration: none;
+}
+body > div {
+    width: 100%;
+    background: #efefef;
+}
+
+body > .wrapper > .head-cn {
+    height: 100px;
+    background: #000000;
+    width: 100%;
+    margin: 0 auto;
+}
+body > .wrapper > .head-cn > .head-container {
+    width: 1220px;
+    height: 100px;
+    margin: 0 auto;
+}
+body > .wrapper > .head-cn > .head-container > .head-left {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    top: 25px;
+    border-radius: 50%;
+    background: url(http://static.smartisanos.cn/index/assets/images/global-logo-red.9f9d87181880f811d2dc2ba547ed88b6.png) no-repeat;
+}
+body > .wrapper > .head-cn > .head-container > .head-center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: -10px 0 0 306px;
+    font-size: 14px;
+}
+body > .wrapper > .head-cn > .head-container > .head-center > a {
+    color: #fff;
+}
+body > .wrapper > .head-cn > .head-container > .head-right {
+    float: right;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    font-size: 14px;
+}
+body > .wrapper > .head-cn > .head-container > .head-right > .personal-zone {
+    width: 20px;
+    height: 20px;
+    left: 8px;
+    border: 1px solid blue;
+    background: url(http://static.smartisanos.cn/index/assets/images/account-icon.32d87deb02b3d1c3cc5bcff0c26314ac.png) no-repeat;
+}
+body > .wrapper > .head-cn > .head-container > .head-right > .car {
+    width: 30px;
+    height: 20px;
+    border: 1px solid orange;
+    background: url(http://static.smartisanos.cn/index/assets/images/account-icon.32d87deb02b3d1c3cc5bcff0c26314ac.png) no-repeat;
+}
+
+body > .wrapper > .nav-sub-wrapper > .nav-sub {
+    width: 100%;
+    height: 90px;
+    color: #666;
+}
+body > .wrapper > .nav-sub-wrapper > .nav-sub > .nav-sub-container {
+    width: 1220px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+body > .wrapper > .nav-sub-wrapper > .nav-sub > .nav-sub-container > a {
+    padding-right: 25px;
+    font-size: 14px;
+    color: #666;
+}
+body > .wrapper > .nav-sub-wrapper > .swiper-container {
+    border: 1px solid red;
+
+}
+body > .wrapper > .nav-sub-wrapper > .swiper-container > .swiper-wrapper {
+    border: 1px solid blue;
+    margin: 0 auto;
+}
+body > .wrapper > .nav-sub-wrapper > .swiper-container > .swiper-wrapper > img {
+    margin: 0 auto;
+}
+body > .wrapper > .nav-sub-wrapper > .cover-link {
+    width: 100%;
+    height: 200px;
+    border: 1px solid purple;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .nav-sub-wrapper > .cover-link > .cover-link-wrapper {
+    width: 305px;
+    height: 200px;
+    border: 1px solid orangered;
+    background: url("http://placehold.it/355x200") no-repeat;
+}
+
+body > .wrapper > .best-sellers {
+    width: 1220px;
+    height: 520px;
+    border: 1px solid magenta;
+    margin: 0 auto;
+
+}
+body > .wrapper > .best-sellers > .best-sellers-title {
+    width: 1220px;
+    height: 60px;
+    background: #FBFBFB;
+    float: right;
+    margin-top: 30px;
+}
+body > .wrapper > .best-sellers > .best-sellers-title > p {
+    margin: 20px 0 10px 30px;
+    font-size: 100%;
+    font-weight: 400;
+}
+body > .wrapper > .best-sellers > .best-sellers-goods {
+    margin-top: 90px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .best-sellers > .best-sellers-goods > div {
+    width: 305px;
+    height: 430px;
+    background: #FFFFFF;
+    border: 1px solid orangered;
+}
+body > .wrapper > .official-selections {
+    width: 1220px;
+    height: 950px;
+    margin: 0 auto;
+    border: 1px solid plum;
+}
+body > .wrapper > .official-selections > .official-selections-title {
+    margin-top: 30px;
+    background: #FBFBFB;
+    line-height: 60px;
+}
+body > .wrapper > .official-selections > .official-selections-title > p {
+    margin-left: 30px;
+}
+body > .wrapper > .official-selections > .official-selections-goods {
+    height: 860px;
+    border: 1px solid yellowgreen;
+}
+body > .wrapper > .official-selections > .official-selections-goods > .part1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .official-selections > .official-selections-goods > .part1 > div {
+    width: 305px;
+    height: 430px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}
+body > .wrapper > .official-selections > .official-selections-goods > .part1 > div:nth-child(1) {
+    width: 610px;
+    height: 430px;
+    border: 1px solid blue;
+    background: #F8F8F8;
+}
+body > .wrapper > .official-selections > .official-selections-goods > .part2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .official-selections > .official-selections-goods > .part2 > div {
+    width: 305px;
+    height: 430px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}
+body > .wrapper > .brand-selections {
+    width: 1220px;
+    height: 950px;
+    margin: 0 auto;
+    border: 1px solid plum;
+}
+body > .wrapper > .brand-selections > .brand-selections-title {
+    margin-top: 30px;
+    background: #FBFBFB;
+    line-height: 60px;
+}
+body > .wrapper > .brand-selections > .brand-selections-title > p {
+    margin-left: 30px;
+}
+body > .wrapper > .brand-selections > .brand-selections-goods {
+    height: 860px;
+    border: 1px solid yellowgreen;
+}
+body > .wrapper > .brand-selections > .brand-selections-goods > .part1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .brand-selections > .brand-selections-goods > .part1 > div {
+    width: 305px;
+    height: 430px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}
+body > .wrapper > .brand-selections > .brand-selections-goods > .part1 > div:nth-child(1) {
+    width: 610px;
+    height: 430px;
+    border: 1px solid blue;
+    background: #F8F8F8;
+}
+body > .wrapper > .brand-selections > .brand-selections-goods > .part2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .brand-selections > .brand-selections-goods > .part2 > div {
+    width: 305px;
+    height: 430px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}
+body > .wrapper > .trends-of-smartisan {
+    width: 1220px;
+    height: 290px;
+    margin: 0 auto;
+    border: 1px solid plum;
+}
+body > .wrapper > .trends-of-smartisan > .trends-of-smartisan-title {
+    margin-top: 30px;
+    background: #FBFBFB;
+    line-height: 60px;
+}
+body > .wrapper > .trends-of-smartisan > .trends-of-smartisan-title > p {
+    margin-left: 30px;
+}
+body > .wrapper > .trends-of-smartisan > .trends-of-smartisan-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .trends-of-smartisan > .trends-of-smartisan-content > div {
+    width: 305px;
+    height: 200px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}
+body > .wrapper > .smartisan-apps {
+    width: 1220px;
+    height: 450px;
+    margin: 0 auto;
+    border: 1px solid plum;
+}
+body > .wrapper > .smartisan-apps > .smartisan-apps-title {
+    margin-top: 30px;
+    background: #FBFBFB;
+    line-height: 60px;
+}
+body > .wrapper > .smartisan-apps > .smartisan-apps-title > p {
+    margin-left: 30px;
+}
+body > .wrapper > .smartisan-apps > .smartisan-apps-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .smartisan-apps > .smartisan-apps-content > div {
+    width: 305px;
+    height: 360px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}
+body > .wrapper > .forum-selection {
+    width: 1220px;
+    height: 452px;
+    margin: 0 auto;
+    border: 1px solid plum;
+}
+body > .wrapper > .forum-selection > .forum-selection-title {
+    margin-top: 30px;
+    background: #FBFBFB;
+    line-height: 60px;
+}
+body > .wrapper > .forum-selection > .forum-selection-title > p {
+    margin-left: 30px;
+}
+body > .wrapper > .forum-selection > .forum-selection-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+body > .wrapper > .forum-selection > .forum-selection-content > div {
+    width: 305px;
+    height: 362px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+}

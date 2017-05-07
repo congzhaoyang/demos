@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        body > .wrapper > #parent {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        body > .wrapper > #parent > #banner {
+            width: 80%;
+            height: 60%;
+            background: lightgrey;
+            text-align: center;
+            vertical-align: center;
+            transform: rotateX(30deg),rotateY(0);
+            transition-delay: 100;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            box-shadow: 0px 0px 10px 0px hsla(0,0%,0%,0.55);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="parent">
+            <div id="banner">
+                <p>漂亮得不像实力派</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict'
+
+        parent.addEventListener('mousemove',function(e){
+            let width = document.body.clientWidth;
+            let height = document.body.clientHeight;
+
+            let xCenter = width/2;
+            let yCenter = height/2;
+
+
+
+            let xDiff = e.clientX - xCenter;
+            let yDiff = e.clientY - yCenter;
+            console.log(e.clientX,e.clientY);
+
+            //变为百分数
+            let xPercent = xDiff/width*2;
+            let yPercent = yDiff/height*2;
+            
+            //得到x,y方向转动的
+            let xDeg = xPercent * 16;
+            let yDeg = yPercent * 20;
+
+            document.getElementById('banner').style.transform = `translateZ(-50px) rotateX(${yDeg}deg) rotateY(${xDeg}deg)`;
+        });
+    </script>
+</body>
+</html>
