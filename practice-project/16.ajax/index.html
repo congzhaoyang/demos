@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }     
+    li {
+        width: 15%;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax-demo</title>
+</head>
+<body>
+    <div id="container">
+        <ol id="orderList">
+        </ol>
+    </div>
+    <button id='loadImg'>加载图片</button>
+    <script>
+        var page = 1
+        loadImg.onclick = function () {
+            var request = new XMLHttpRequest()
+            request.open('GET', '/page' + page + '.json')
+            request.onload = function () {
+                if (page === 2) {
+                    loadImg.setAttribute('disabled', 'true')
+                    loadImg.style.backgroundColor = 'grey'
+                }
+                page += 1
+                let arry = JSON.parse(request.responseText)
+                console.log(request.responseText)
+                console.log(arry)
+                arry.forEach(function (item, index) {
+                    console.log(item, index)
+                    let list = document.createElement('li')
+                    let image = document.createElement('img')
+                    list.appendChild(image)
+                    image.src = item.url
+                    orderList.appendChild(list)
+                }
+            )}
+            request.send()
+        }
+    </script>
+</body>
+
+</html>
