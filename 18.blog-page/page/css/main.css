@@ -1,0 +1,149 @@
+nav {
+    background: #ededed;
+    height: 6vh;
+}
+
+#banner {
+    background: #ffffff;
+    height: 94vh;
+    margin-top: -20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li, nav .logo {
+    display: inline-block;
+    line-height: 6vh;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    line-height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    height: inherit;
+    color: black;
+}
+
+nav .logo {
+    float: left;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#banner .inner {
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+}
+
+#banner .inner h1 {
+    font-size: 30px;
+}
+
+button { 
+    border: none;
+    background: #333;
+    color: #eee;
+    padding: 10px;
+}
+
+#banner button {
+    padding: 14px 40px;
+}
+
+#banner .inner .more {
+    margin-top: 100px;
+}
+
+.sub-heading {
+    line-height: 30px;
+    margin: 10px
+}
+
+.logo a {
+    color: black;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.green-section {
+    text-align: center;
+    background: #2da9ac;
+
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.hr {
+    width: 60%;
+    height: 2px;
+    margin: 10px auto;
+    background: #2dac7a;
+}
+
+.green-section .icon-group {
+    margin-top: 20px;
+}
+.green-section .icon-group .icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    margin: 40px;
+    background: lightyellow;
+}
+
+.gray-section .img-section {
+    width: 50%;
+}
+
+.img-section img {
+    width: 100%;
+}
+
+.gray-section .text-section {
+    width: 40%;
+    margin: 0 5%;
+}
+
+.article-preview:nth-child(odd) {
+    background: #ffffff;
+}
+
+.article-preview > div {
+    float: left;
+    font-size: 0;/* 解决两图片之间的小缝隙问题 */
+}
+
+.article-preview::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.text-section {
+    position: relative;
+    top: 68px;
+}
+
+.text-section h2 {
+    margin: 20% 0 20px;
+    font-size: 24px;
+}
+
+.text-section p {
+    font-size: 18px;
+}
