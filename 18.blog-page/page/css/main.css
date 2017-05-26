@@ -42,7 +42,7 @@ nav .logo {
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 160px;
+    top: 30%;
 }
 
 #banner .inner h1 {
@@ -85,6 +85,8 @@ button {
 .wrapper {
     max-width: 1080px;
     margin: 0 auto;
+    position: relative;
+    top: 30%;
 }
 
 .hr {
@@ -128,10 +130,18 @@ button {
     font-size: 0;/* 解决两图片之间的小缝隙问题 */
 }
 
-.article-preview::after {
+/*清除浮动类 后面要专门研究一下清除浮动*/
+.clearfix:after {
     content: '';
     display: block;
     clear: both;
+}
+
+/*article-preview清除浮动*/
+.article-preview:after {
+    content: '';
+    display: block;
+    clear: both
 }
 
 .text-section {
@@ -146,4 +156,79 @@ button {
 
 .text-section p {
     font-size: 18px;
+}
+
+.purple-section {
+    background: #3f3965;
+    padding: 80px;
+    color: #fff;
+}
+
+.purple-section .wrapper {
+    text-align: center;
+}
+
+.purple-section .wrapper .hr {
+    background: #372359;
+}
+
+.card {
+    float: left;
+    width: 50%;
+    min-height: 300px;
+    background: gray;
+    box-sizing: border-box;
+    padding: 50px;
+    text-align: left;
+}
+
+.card p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.card:nth-child(1) {
+    background: rgba(0,0,0,0.05);
+}
+
+.card:nth-child(4) {
+    background: rgba(0,0,0,0.05);
+}
+
+.card:nth-child(5) {
+    background: rgba(0,0,0,0.05);
+}
+
+.card:nth-child(2) {
+    background: rgba(0,0,0,0.1);
+}
+
+.card:nth-child(3) {
+    background: rgba(0,0,0,0.1);
+}
+
+.card:nth-child(6) {
+    background: rgba(0,0,0,0.1);
+}
+
+ul {
+    margin: 0;
+}
+
+footer {
+    background: #eee;
+    min-height: 200px;
+    text-align: center;
+}
+
+.share-group {
+    display: block;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 60px 0 40px;
+}
+
+.share-group li {
+    display: inline-block;
+    padding: 0 10px;
 }
