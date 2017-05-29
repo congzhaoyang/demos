@@ -1,0 +1,108 @@
+.section1 img {
+  width: 1080px;
+}
+
+.section2 {
+  width: 1080px;
+  position: relative;
+  top: -62px;
+}
+
+.section2 .wrapper {
+  width: 972px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 62px;
+  background-image: url(./img/log-sign-1.png);
+}
+
+.section2 .wrapper img {
+  width: 484px;
+  height: 124px;
+}
+
+.log-in-section3 {
+  width: 1080px;
+  background: #F9F9F9;
+}
+
+.log-in-section3 .social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 1080px;
+}
+
+.social-icon-bg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.social-icon-bg img {
+  position: relative;
+  top: 72px;
+  left: 80px;
+}
+
+.social-icon-bg:first-child {
+  margin-left: -80px;
+}
+
+.social-icon-bg:last-child {
+  margin-right: -80px;
+}
+
+.log-in-section3 .break-down {
+  margin: 52px auto 76px;
+  display: block;
+}
+
+.done-btn {
+  margin: 0 auto;
+  display: block;
+}
+
+.log-in-section3 .content {
+  display: block;
+  margin: 0 auto;
+}
+
+.log-in-section3 .input {
+  margin: 0 auto;
+}
+
+.log-in-section3 .input input {
+  text-align: center;
+  border: none;
+  width: 800px;
+  height: 84px;
+  font-size: 40px;
+  background: #F9F9F9;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+}
+
+.input input:first-child {
+  position: absolute;
+  top: 1254px; /*1281px*/
+  left: 140px;
+}
+
+.input input:last-child {
+  position: absolute;
+  top: 1460px; /*1281px*/
+  left: 140px;
+}
+
+.log-in-section3 .remember-me {
+  display: block;
+  margin: 0 auto;
+  margin: 38px 0 52px 110px;
+}
+
+.log-in-section3 .forget-password {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 62px;
+}
