@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./static/semantic/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="./static/semantic/semantic/dist/semantic.min.js"></script>
+    <style>
+        .ui {
+            margin: 4px;
+        }
+        .button {
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui compact message">
+    <p>您好: <span id="current-user"></span></p>
+    </div>
+    <h1>注册</h1>
+    <form name="signUp">
+        <div class="ui left icon input">
+            <input type="text" name=username placeholder="用户名">
+            <i class="user icon"></i>
+        </div>
+        <br>
+        <div class="ui left icon input">
+            <input type="email" name=email placeholder="邮箱">    
+            <i class="mail square icon"></i>
+        </div>
+        <br>
+        <div class="ui left icon input">
+            <input type="password" name=password placeholder="密码">    
+            <i class="lock icon"></i>
+        </div>
+        <br>
+        <button class="ui button" type="submit">注册 </button>
+    </form>
+
+    <h1>登录</h1>
+    <form name="log-in">
+        <div class="ui left icon input">
+            <input type="text" name=username placeholder="用户名">
+            <i class="user icon"></i>
+        </div>
+        <br>
+        <div class="ui left icon input">
+            <input type="password" name=password placeholder="密码">
+            <i class="lock icon"></i>
+        </div>
+        <br>
+        <button class="ui button" type="submit">登录 </button>
+    </form>
+    <br>
+    <button class="ui button" id="log-out" type="submit">登出 </button>
+
+    <script src="./node_modules/leancloud-storage/dist/av.js"></script>
+    <script>
+
+    //初始化
+    var APP_ID = '93YtLRQzyhjHaQnNujaw3FCR-gzGzoHsz';
+    var APP_KEY = 'UXXnIsMS8seP7K7AUS5GfceY';
+    AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+    });
+
+    //注册功能
+    let signUpForm = document.querySelector('form[name=signUp]');
+    console.log(signUpForm);
+    signUpForm.addEventListener('submit', (event)=>{
+        event.preventDefault();
+            // 新建 AVUser 对象实例
+        var user = new AV.User();
+        // 设置用户名
+        user.setUsername(signUpForm.username.value);
+        // 设置密码
+        user.setPassword(signUpForm.password.value);
+        // 设置邮箱
+        user.setEmail(signUpForm.email.value);
+        user.signUp().then(function (loginedUser) {
+            console.log(loginedUser);
+            window.location.reload();
+        }, function (error) {
+            console.log(error);
+        });
+    })
+
+    //欢迎当前用户功能
+    var currentUser = AV.User.current();
+    console.log("currentuser"+currentUser);
+    if (currentUser) {
+        document.getElementById('current-user').innerText = currentUser.attributes.username;
+    }
+    else {
+        document.getElementById('current-user').innerText = "游客";
+    }
+
+    //登出功能
+    var logOutBtn = document.getElementById('log-out');
+    logOutBtn.addEventListener('click', function() {
+        AV.User.logOut();
+        // 现在的 currentUser 是 null 了
+        window.location.reload();
+        var currentUser = AV.User.current();
+    })
+
+    //登录功能
+    let logInForm = document.querySelector('form[name=log-in]');
+    console.log(logInForm);
+    logInForm.addEventListener('submit', (event)=> {
+        event.preventDefault();
+        var username = logInForm.username.value;
+        var password = logInForm.password.value;
+        AV.User.logIn(username, password).then(function (loginedUser) {
+            console.log(loginedUser);
+            window.location.reload();
+            alert("登录成功");
+        }, function (error) {
+            console.log(error);
+            switch(error.code){
+                case 210: 
+                    alert("密码错误");
+                case 211:
+                    alert("用户名不存在");
+            }
+        });
+    })
+    </script>
+</body>
+</html
