@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    background: #5EC6E4;
+    display: inline-block;
+    vertical-align: center;
+}
+
+.sheep {
+
+}
+
+.top .body {
+    height: 112px;
+    width: 112px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    vertical-align: center;
+    z-index: 2;
+}
+
+.leg {
+    width: 0.5em;
+    height: 2.5em;
+    background: black;
+    display: inline-block;
+    position: relative;
+    left: 40.5%;
+    top: 5em;
+    transform: translateX(-100%);
+    z-index: 1;
+    margin-left: 0.5em;
+}
+
+.head {
+    display:inline-block;
+    width:5em;
+    height:5em;
+    border-radius:100%;
+    vertical-align:middle;
+    position:relative;
+    top:1em;
+    left: 51%;
+    z-index: 3;
+    background: #000;
+}
+
+.head .mouth {
+    height: 2.2em;
+    width: 3em;
+    background: #000;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+    top: 0.8em;
+    left: 2.5em;
+}
+
+.head .ear-one {
+    height: 1em;
+    width: 1.5em;
+    border-radius: 50%;
+    background: #000;
+}
+
+.head .ear-two {
+    height: 1em;
+    width: 1.5em;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+    left: 3.5em;
+    top: -1em;
+}
+
+.head .eye-one {
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    top: -2em;
+    left: 1.8em;
+}
+
+.head .eye-two {
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    top: -3.2em;
+    left: 4.2em;
+}
+
+.head .eye-one .eyeball {
+    height: 0.5em;
+    width: 0.5em;
+    background: #000;
+    border-radius: 50%;
+    position: relative;
+    top: 0.5em;
+    left: 0.2em;
+}
+
+.head .eye-two .eyeball {
+    height: 0.5em;
+    width: 0.5em;
+    background: #000;
+    border-radius: 50%;
+    position: relative;
+    top: 0.5em;
+    left: 0.2em;
+}
