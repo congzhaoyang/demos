@@ -1,0 +1,134 @@
+$highlight-color: #f90;
+$basic-border: 1px solid red;
+
+$nav-color #f90;
+nav {
+    $width: 100px;
+    width: $width;
+    color: $nav-color;
+}
+
+#content {
+    article {
+        h1 {color: #333}
+        p {margin-bottom: 1.4em}
+    }
+    aside { background: #eee}
+}
+
+#content {
+    background-color: #ddd;
+    aside {background-color: #fff}
+}
+
+article a {
+    color: blue;
+    &:hover { color: red }
+}
+
+#content aside {
+    color: red;
+    body.ie & { color: green }
+}
+
+.button ,button {
+    margin: 0;
+} 
+
+.container {
+    h1, h2, h3 { margin-bottom: 0.8em}
+}
+
+nav, aside {
+    a {color: blue}
+}
+
+article section { margin: 5px}
+article > section { border: 1px solid #ddd }
+header + p { font-size: 1.1em }
+article ~ article { border-top: 1px dashed #ccc }
+
+article {
+    section { margin: 5px }
+    > section { border: 1px solid red }
+    ~article { border-top: 1px dashed #ccc }
+    dl > {
+        dt { color: #eee }
+        dd { color: #555 }
+    }
+}
+
+nav {
+    border: {
+        style: solid;
+        width: 1px;
+        color: red;
+    }
+}
+
+nav {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
+nav {
+    border: 1px solid #ddd {
+    left: 0px;
+    right: 0px;
+    }
+}
+
+@import "themes/_night-sky";
+
+$fancybox-width  = 100px !default;
+.fancybox {
+    width: $fancybox-width;
+}
+
+@mixin rounded-corners {
+    border-radius: 5px;
+}
+
+notice {
+    background-color: green;
+    border: 1px solid red;
+    @include rounded-corners;
+}
+
+@mixin link-colors($normal, $hover, $visited) {
+    color: normal;
+    &:hover { color: $hover; }
+    &:visited { color: $visited; }
+}
+
+a {
+    @include link-colors(blue, red, green);
+}
+
+@mixin link-colors(
+    $normal,
+    $hover: $normal,
+    $visited: $normal
+)
+{
+    color: $normal;
+    $:hover { color: $hover; }
+    $:visited { color: $visited; }
+}
+
+@include link-colors(red)
+
+.error {
+    border: 1px red;
+    background-color: #fdd;
+}
+.seriousError {
+    @extend .error;
+    border-width: 3px;
+}
+
+.disaled {
+    color: gray;
+    @extend a;
+}
