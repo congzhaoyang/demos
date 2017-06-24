@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box; 
+  margin: 0;
+}
+
+body {
+  height: 100vh; 
+  }
+
+.background-img {
+  background: url(../img/cover.jpg) no-repeat;
+  background-size: auto 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  background-position: center;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+  z-index: 1; }
+
+.disc-container {
+  position: relative;
+  top: -100vh; 
+  height: 100vh;
+  }
+
+.needle-plus {
+  position: relative;
+  left: -0.4rem;
+  width: 26.57vw;
+  margin-left: 50%;
+  z-index: 5; 
+  left: -6.28vw;
+  }
+
+.disc-plus {
+  position: relative;
+  width: 82.61vw;
+  display: block;
+  margin: 0 auto 0;
+  z-index: 3; 
+  top: -19.32vw;
+  }
+
+.disc-light-plus {
+  position: relative;
+  width: 82.61vw;
+  display: block;
+  margin: 0 auto 0;
+  z-index: 4; 
+  top: -101.93vw;
+  }
+
+.cover {
+  position: relative;
+  width: 51.21vw;
+  z-index: 2;
+  display: block;
+  margin: 0 auto 0;
+  top: -168.8vw;
+  }
+
+.button {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: -91.787vw;
+}
+.button span {
+    width: 40.1vw;
+    height: 8.695vw;
+    display: inline-block;
+    text-align: center;
+    line-height: 8.695vw;
+    border-radius: 4px;
+}
+
+.open {
+    border: 1px solid #d43b32;
+    color: #d43b32;
+    font-size: 15px;
+}
+
+.download {
+    background: #d43b32;
+    color: white;
+    font-size: 15px;
+}
+/*# sourceMappingURL=song.css.map */

@@ -1,6 +1,8 @@
 /**
  * Created by admin on 08/06/2017.
  */
+
+
 function promiseMaker() {
     return new Promise(function (resolve/*接受*/, reject/*拒绝*/) {
         setTimeout(function () {
